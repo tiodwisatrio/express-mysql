@@ -16,8 +16,15 @@ const updateUser = (req, res) => {
   });
 };
 
+const deleteUser = (req, res) => {
+  res.json({
+    messages: "Delete User Success",
+  });
+};
+
 module.exports = {
   getAllUsers,
   createUser,
   updateUser,
+  deleteUser,
 };
