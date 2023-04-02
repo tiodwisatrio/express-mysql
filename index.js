@@ -10,6 +10,11 @@ app.get("/", (req, res) => {
 
 app.post("/", (req, res) => {
   res.send("Hello Post Method");
+  res.json({
+    nama: "Tio Dwi Satrio",
+    email: "tiodwisatrio27@gmail.com",
+    umur: 20,
+  });
 });
 
 app.listen(PORT, () => {
