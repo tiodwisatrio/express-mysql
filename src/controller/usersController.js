@@ -5,13 +5,19 @@ const getAllUsers = (req, res) => {
 };
 
 const createUser = (req, res) => {
-    res.json({
-        messages: "Create New User Success",
-    });
-}
+  res.json({
+    messages: "Create New User Success",
+  });
+};
 
+const updateUser = (req, res) => {
+  res.json({
+    messages: "Update User Success",
+  });
+};
 
 module.exports = {
-    getAllUsers,
-    createUser,
-}
+  getAllUsers,
+  createUser,
+  updateUser,
+};
