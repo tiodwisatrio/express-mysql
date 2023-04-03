@@ -1,5 +1,6 @@
 const getAllUsers = (req, res) => {
   const data = {
+    id: 1,
     name: "Joko",
     email: "joko@gmail.com",
     address: "Solo",
@@ -20,8 +21,11 @@ const createUser = (req, res) => {
 };
 
 const updateUser = (req, res) => {
+  const { id } = req.params;
+  console.log("Id User : ", id);
   res.json({
     messages: "Update User Success",
+    data: req.body,
   });
 };
 
