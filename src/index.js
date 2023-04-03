@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 const PORT = 5001;
-
 const usersRoutes = require("./routes/users");
 const { logRequest, logResponse } = require("./middleware/logs");
 
