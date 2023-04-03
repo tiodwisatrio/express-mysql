@@ -30,8 +30,17 @@ const updateUser = (req, res) => {
 };
 
 const deleteUser = (req, res) => {
+  const { id } = req.params;
+  console.log("Id User : ", id);
+
   res.json({
     messages: "Delete User Success",
+    data: {
+      id: id,
+      name: "Joko",
+      email: "joko@gmail.com",
+      address: "Solo",
+    },
   });
 };
 
