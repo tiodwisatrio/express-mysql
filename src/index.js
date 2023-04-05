@@ -23,6 +23,22 @@ app.use(express.json());
 
 app.use("/users", usersRoutes);
 
+app.use("/", (req, res) => {
+  dbPool.execute("SELECT * FROM users", (err, result) => {
+    if (err) {
+      console.log(err);
+      return res.status(500).json({
+        messages: "Internal Server Error",
+      });
+    }
+
+    res.json({
+      messages: "Get All Users Success",
+      data: result,
+    });
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running http://localhost:${PORT}`);
 });
